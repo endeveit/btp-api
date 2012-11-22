@@ -47,7 +47,7 @@ class Counter
         $this->request = $request;
 
         if (empty($data['srv'])) {
-            throw new \InvalidArgumentException('You must provide "srv" key in $data');
+            $data['srv'] = gethostname();
         }
 
         if (empty($data['service'])) {
