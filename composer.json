@@ -1,0 +1,26 @@
+{
+    "name": "endeveit/btp-api",
+    "type": "library",
+    "description": "API library for BTP daemon.",
+    "keywords": [
+        "mamba",
+        "btp",
+        "api"
+    ],
+    "homepage": "http://github.com/endeveit/btp-api",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Nikita Vershinin",
+            "email": "endeveit@gmail.com",
+            "homepage": "http://endeveit.net"
+        }
+    ],
+    "require": {
+        "php": ">=5.3"
+    },
+    "autoload": {
+        "psr-0": { "Btp": "src/" }
+    }
+}
+
