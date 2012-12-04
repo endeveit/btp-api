@@ -72,6 +72,19 @@ class Connection
     }
 
     /**
+     * Factory method to instantiate objects.
+     *
+     * @static
+     * @param  string              $host
+     * @param  integer             $port
+     * @return \Btp\Api\Connection
+     */
+    public static function factory($host = null, $port = null)
+    {
+        return new self($host, $port);
+    }
+
+    /**
      * Destructor.
      * Closes socket.
      */
