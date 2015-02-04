@@ -90,7 +90,7 @@ class Connection
      */
     public function __destruct()
     {
-        if (null !== $this->socket) {
+        if ($this->socket) {
             fclose($this->socket);
             $this->socket = null;
         }
@@ -157,7 +157,7 @@ class Connection
     protected function connect()
     {
         if ((null === $this->socket) && (false === $this->connectionFailed)) {
-            $this->socket = fsockopen('udp://' . $this->host, $this->port);
+            $this->socket = @fsockopen('udp://' . $this->host, $this->port);
             if (!$this->socket) {
                 $this->connectionFailed = true;
             }
