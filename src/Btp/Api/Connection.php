@@ -144,7 +144,7 @@ class Connection
         $this->connect();
 
         if ($this->socket && !$this->isFailed()) {
-            fwrite(
+            @fwrite(
                 $this->socket,
                 json_encode(array('jsonrpc' => '2.0','method' => $method, 'params' => $params))."\r\n"
             );
